@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c402f150ecb71b844b4d48eacb7b4537
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Jupiter Pro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 68453bbeea30b5f458a4978dce9af866, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
