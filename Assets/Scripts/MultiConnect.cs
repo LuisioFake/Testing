@@ -6,6 +6,7 @@ namespace YogaFlow
 {
     public class MultiConnect : MonoBehaviour
     {
+        public ConnectionManager manager;
         public bool rightConnections = false;
         [System.Serializable]
         public class Connection
@@ -24,7 +25,6 @@ namespace YogaFlow
             }
             [Range(-180, 180)]
             public float rotation = 0f;
-            public float tolerance = 10f;
             private bool correct = false;
             public bool Correct
             {
@@ -43,6 +43,11 @@ namespace YogaFlow
         private int gamePoints;
         private void Start()
         {
+            if (manager == null)
+            {
+                manager = FindObjectOfType<ConnectionManager>();
+            }
+
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             foreach (Connection connection in connections)
             {
@@ -61,7 +66,7 @@ namespace YogaFlow
                 connection.Direction = connection.target.position - connection.RelativeTo.position;
                 connection.Angle = Vector2.Angle(connection.Direction, connection.RelativeTo.up);
 
-                if (connection.Angle <= connection.tolerance)
+                if (connection.Angle <= manager.Tolerance)
                 {
                     connection.Correct = true;
                 }

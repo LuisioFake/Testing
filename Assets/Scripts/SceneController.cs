@@ -7,8 +7,12 @@ namespace YogaFlow
 {
     public class SceneController : MonoBehaviour
     {
-        public static SceneController instance;
+        private static SceneController instance;
         private void Awake()
+        {
+            instance = GetInstance();
+        }
+        public SceneController GetInstance()
         {
             if (instance == null)
             {
@@ -19,6 +23,7 @@ namespace YogaFlow
             {
                 Destroy(gameObject);
             }
+            return instance;
         }
         public void GoTo(string sceneName)
         {

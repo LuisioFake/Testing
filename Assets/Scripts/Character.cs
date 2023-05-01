@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace YogaFlow
 {
-    public class Character
+    public class Character : ICloneable
     {
         private Vector3 position;
         private Quaternion rotation;
@@ -13,7 +13,7 @@ namespace YogaFlow
             position = characterPosition;
             rotation = characterRotation;
         }
-        public Character Clone()
+        public ICloneable Clone()
         {
             return MemberwiseClone() as Character;
         }
