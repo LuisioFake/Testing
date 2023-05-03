@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connections: []
-  difficulty: 1
+  difficulty: 0
   testBool: 0
   active: 1
   timer: 0
