@@ -347,6 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 712535211}
   - component: {fileID: 712535212}
+  - component: {fileID: 712535213}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -390,6 +391,110 @@ MonoBehaviour:
   meter: {fileID: 1979254544}
   mFalse: {fileID: 2100000, guid: f87d794cac2d45a47ac86f19da611525, type: 2}
   mTrue: {fileID: 2100000, guid: 926089394d9fbad4ab9495357e272e36, type: 2}
+--- !u!114 &712535213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712535210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c44c4b83f7db74daf4a7e5fedcba49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exerciseAchievements:
+  - name: Normal 1
+    description: "Completa 1 ejercicio con calificaci\xF3n normal."
+    inDifficulty: 1
+    requisite: 0
+    inQuantity: 1
+    inSeconds: 0
+    progress: 0
+  - name: Normal 2
+    description: "Completa 5 ejercicios con clasificaci\xF3n normal."
+    inDifficulty: 1
+    requisite: 0
+    inQuantity: 5
+    inSeconds: 0
+    progress: 0
+  - name: Normal 3
+    description: "Completa 15 ejercicios con clasificaci\xF3n normal."
+    inDifficulty: 1
+    requisite: 0
+    inQuantity: 15
+    inSeconds: 0
+    progress: 0
+  - name: Avanzado 1
+    description: "Completa 1 ejercicio con clasificaci\xF3n avanzada."
+    inDifficulty: 2
+    requisite: 0
+    inQuantity: 1
+    inSeconds: 0
+    progress: 0
+  - name: Avanzado 2
+    description: "Completa 5 ejercicios con clasificaci\xF3n avanzada."
+    inDifficulty: 2
+    requisite: 0
+    inQuantity: 5
+    inSeconds: 0
+    progress: 0
+  - name: Avanzado 3
+    description: "Completa 15 ejercicios con clasificaci\xF3n avanzada."
+    inDifficulty: 2
+    requisite: 0
+    inQuantity: 15
+    inSeconds: 0
+    progress: 0
+  - name: Experto 1
+    description: "Completa 1 ejercicio con clasificaci\xF3n experto."
+    inDifficulty: 3
+    requisite: 0
+    inQuantity: 1
+    inSeconds: 0
+    progress: 0
+  - name: Experto 2
+    description: "Completa 5 ejercicios con clasificaci\xF3n experto."
+    inDifficulty: 3
+    requisite: 0
+    inQuantity: 5
+    inSeconds: 0
+    progress: 0
+  - name: Experto 3
+    description: "Completa 15 ejercicios con clasificaci\xF3n experto."
+    inDifficulty: 3
+    requisite: 0
+    inQuantity: 15
+    inSeconds: 0
+    progress: 0
+  - name: Tiempo 1
+    description: Completa un ejercicio en menos de 5 minutos.
+    inDifficulty: 0
+    requisite: 1
+    inQuantity: 0
+    inSeconds: 300
+    progress: 0
+  - name: Tiempo 2
+    description: Completa un ejercicio en menos de 3 minutos.
+    inDifficulty: 0
+    requisite: 1
+    inQuantity: 0
+    inSeconds: 180
+    progress: 0
+  - name: Tiempo 3
+    description: Completa un ejercicio en menos de 1 minuto.
+    inDifficulty: 0
+    requisite: 1
+    inQuantity: 0
+    inSeconds: 60
+    progress: 0
+  - name: Ejercicios 1
+    description: Completa exitosamente 100 ejercicios (cualquier dificultad).
+    inDifficulty: 0
+    requisite: 0
+    inQuantity: 100
+    inSeconds: 0
+    progress: 0
 --- !u!1 &791165880
 GameObject:
   m_ObjectHideFlags: 0
