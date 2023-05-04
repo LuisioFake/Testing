@@ -8,6 +8,10 @@ namespace YogaFlow
     {
         public AudioClip[] music;
         private AudioSource manager;
+        private void Awake()
+        {
+            DontDestroyOnLoad(this);
+        }
         private void Start()
         {
             manager = GetComponent<AudioSource>();

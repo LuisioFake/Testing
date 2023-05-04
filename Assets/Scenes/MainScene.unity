@@ -128,6 +128,31 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 08c04bcce39721f47b22bceb51658555, type: 3}
   m_PrefabInstance: {fileID: 1452754743}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &48866683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+  m_PrefabInstance: {fileID: 1379671190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &48866684
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48866683}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f6bcdd4c49d066c4fa87a7a004bf41c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &140217960
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,6 +449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 309478691}
   - component: {fileID: 309478692}
+  - component: {fileID: 309478693}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -469,6 +495,110 @@ MonoBehaviour:
   meter: {fileID: 1053881394}
   mFalse: {fileID: 2100000, guid: f87d794cac2d45a47ac86f19da611525, type: 2}
   mTrue: {fileID: 2100000, guid: 926089394d9fbad4ab9495357e272e36, type: 2}
+--- !u!114 &309478693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309478689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c44c4b83f7db74daf4a7e5fedcba49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exerciseAchievements:
+  - name: Normal 1
+    description: "Completa 1 ejercicio con calificaci\xF3n normal."
+    inDifficulty: 1
+    requisite: 0
+    inQuantity: 1
+    inSeconds: 0
+    progress: 0
+  - name: Normal 2
+    description: "Completa 5 ejercicios con clasificaci\xF3n normal."
+    inDifficulty: 1
+    requisite: 0
+    inQuantity: 5
+    inSeconds: 0
+    progress: 0
+  - name: Normal 3
+    description: "Completa 15 ejercicios con clasificaci\xF3n normal."
+    inDifficulty: 1
+    requisite: 0
+    inQuantity: 15
+    inSeconds: 0
+    progress: 0
+  - name: Avanzado 1
+    description: "Completa 1 ejercicio con clasificaci\xF3n avanzada."
+    inDifficulty: 2
+    requisite: 0
+    inQuantity: 1
+    inSeconds: 0
+    progress: 0
+  - name: Avanzado 2
+    description: "Completa 5 ejercicios con clasificaci\xF3n avanzada."
+    inDifficulty: 2
+    requisite: 0
+    inQuantity: 5
+    inSeconds: 0
+    progress: 0
+  - name: Avanzado 3
+    description: "Completa 15 ejercicios con clasificaci\xF3n avanzada."
+    inDifficulty: 2
+    requisite: 0
+    inQuantity: 15
+    inSeconds: 0
+    progress: 0
+  - name: Experto 1
+    description: "Completa 1 ejercicio con clasificaci\xF3n experto."
+    inDifficulty: 3
+    requisite: 0
+    inQuantity: 1
+    inSeconds: 0
+    progress: 0
+  - name: Experto 2
+    description: "Completa 5 ejercicios con clasificaci\xF3n experto."
+    inDifficulty: 3
+    requisite: 0
+    inQuantity: 5
+    inSeconds: 0
+    progress: 0
+  - name: Experto 3
+    description: "Completa 15 ejercicios con clasificaci\xF3n experto."
+    inDifficulty: 3
+    requisite: 0
+    inQuantity: 15
+    inSeconds: 0
+    progress: 0
+  - name: Tiempo 1
+    description: Completa un ejercicio en menos de 5 minutos.
+    inDifficulty: 0
+    requisite: 1
+    inQuantity: 0
+    inSeconds: 300
+    progress: 0
+  - name: Tiempo 2
+    description: Completa un ejercicio en menos de 3 minutos.
+    inDifficulty: 0
+    requisite: 1
+    inQuantity: 0
+    inSeconds: 180
+    progress: 0
+  - name: Tiempo 3
+    description: Completa un ejercicio en menos de 1 minuto.
+    inDifficulty: 0
+    requisite: 1
+    inQuantity: 0
+    inSeconds: 60
+    progress: 0
+  - name: Ejercicios 1
+    description: Completa exitosamente 100 ejercicios (cualquier dificultad).
+    inDifficulty: 0
+    requisite: 0
+    inQuantity: 100
+    inSeconds: 0
+    progress: 0
 --- !u!1001 &333149449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -968,7 +1098,7 @@ MonoBehaviour:
   minUserDistance: 0.5
   maxUserDistance: 0
   maxLeftRightDistance: 0
-  maxTrackedUsers: 6
+  maxTrackedUsers: 1
   showTrackedUsersOnly: 1
   userDetectionOrder: 0
   centralPosition: {x: 0, y: 0, z: 0}
@@ -2455,6 +2585,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326124081}
   m_CullTransparentMesh: 1
+--- !u!1001 &1379671190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.54
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
+      propertyPath: m_Name
+      value: pose1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5039cb8aee25c744842e1fdb8aa877f, type: 3}
 --- !u!1 &1452213277
 GameObject:
   m_ObjectHideFlags: 0
@@ -2590,7 +2777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08c04bcce39721f47b22bceb51658555, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08c04bcce39721f47b22bceb51658555, type: 3}
       propertyPath: m_LocalPosition.y
