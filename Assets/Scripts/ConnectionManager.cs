@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace YogaFlow
 {
@@ -25,6 +27,7 @@ namespace YogaFlow
         private float hardValue = 15f;
         private float expertValue = 5f;
         public ScoreManager score;
+        public UnityEvent winEvent;
         [Header("Testing")]
         public bool testBool = false;
         public bool active = true;
@@ -49,6 +52,7 @@ namespace YogaFlow
                 toleranceValue = expertValue;
             }
             Debug.Log($"La dificultad es: {difficulty}. Por lo que la tolerancia es {toleranceValue}");
+            score = FindObjectOfType<ScoreManager>();
         }
         private void Update()
         {
@@ -99,28 +103,40 @@ namespace YogaFlow
             {
                 StartCoroutine(Defeat());
             }
+
+#if UNITY_EDITOR
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                StartCoroutine(Defeat());
+            }
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                StartCoroutine(Victory());
+            }
+#endif
         }
         IEnumerator Victory()
         {
             active = false;
             Debug.LogWarning("Has ganado");
-            if (difficulty == DifficultyState.normal)
-            {
-                score.PlayGetBetter();
-            }
-            else
+
+            if (gameTimer <= 60)
             {
                 score.PlayExcelent();
             }
-            yield return new WaitForSeconds(5);
-            ResetGame();
+            else
+            {
+                score.PlayGetBetter();
+            }
+            yield return new WaitForSeconds(3);
+            winEvent.Invoke();
         }
         IEnumerator Defeat()
         {
             active = false;
             Debug.LogWarning("Has perdido");
             score.PlayRetry();
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
             ResetGame();
         }
         public void ResetGame()
@@ -128,6 +144,7 @@ namespace YogaFlow
             active = true;
             timer = 0;
             gameTimer = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

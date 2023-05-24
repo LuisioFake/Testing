@@ -10,7 +10,7 @@ namespace YogaFlow
         private AudioSource manager;
         private void Awake()
         {
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(gameObject);
         }
         private void Start()
         {

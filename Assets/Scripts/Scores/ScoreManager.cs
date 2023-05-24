@@ -10,6 +10,10 @@ namespace YogaFlow
         [SerializeField] private AudioClip retry;
         [SerializeField] private AudioClip getBetter;
         [SerializeField] private AudioClip excelent;
+        private void Awake()
+        {
+            DontDestroyOnLoad(gameObject);
+        }
         private void Start()
         {
             manager = GetComponent<AudioSource>();
