@@ -615,9 +615,9 @@ MonoBehaviour:
   manager: {fileID: 0}
   rightConnections: 0
   connections:
-  - rotation: 90
+  - rotation: 45
     target: {fileID: 2002155654}
-  - rotation: -90
+  - rotation: -45
     target: {fileID: 1613919139}
 --- !u!1 &401678355
 GameObject:
@@ -4207,7 +4207,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   rightConnections: 0
   connections:
-  - rotation: -90
+  - rotation: 0
     target: {fileID: 1233477777}
 --- !u!1 &1666324426
 GameObject:
@@ -4761,7 +4761,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   rightConnections: 0
   connections:
-  - rotation: 90
+  - rotation: 0
     target: {fileID: 1519181048}
 --- !u!1 &2060897184
 GameObject:

@@ -104,7 +104,6 @@ namespace YogaFlow
                 StartCoroutine(Defeat());
             }
 
-#if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.O))
             {
                 StartCoroutine(Defeat());
@@ -113,7 +112,6 @@ namespace YogaFlow
             {
                 StartCoroutine(Victory());
             }
-#endif
         }
         IEnumerator Victory()
         {
